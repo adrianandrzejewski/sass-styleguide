@@ -1,8 +1,7 @@
-# LU CSS/SASS Styleguide
+# CSS/SASS Styleguide
 
 ## Table of contents
 
-- [Kiki](#kiki)
 - [Syntax & Formatting](#syntax--formatting)
 - [Selectors and Names](#selectors-and-names)
 - [Rule Set Innards](#rule-set-innards)
@@ -13,11 +12,6 @@
 - [Project structure](#project-structure)
 - [SCSS-Lint](#scss-lint)
 
-## Kiki
-
-Kiki is an internal library for sass. It cointains useful mixins, helpers, grid system and media queries manager. It's recommended to use it in every project.
-
-https://jira:1337/svn/PLAWEB/22_src/tools/CSS/kiki/trunk/
 
 ## Syntax & Formatting
 ##### Indentation
@@ -163,20 +157,6 @@ p {
   color: #f00;
 }
 ```
-
-##### Single declarations
-* Declare single declarations on one line
-
-```scss
-/* avoid */
-.span {
-  width: 60px;
-}
-```
-```scss
-/* recommended */
-.span { color: #f00; }
-``` 
 
 
 ##### Overqualifying selectors
@@ -686,23 +666,6 @@ color: #000 !important;
 .selector {}
 ```
 
-##### Comment style
-* Use C-style comments
-
-```scss
-/**
- * Helper class to truncate and add ellipsis to a string too long for it to fit
- * on a single line.
- * 1. Prevent content from wrapping, forcing it on a single line.
- * 2. Add ellipsis at the end of the line.
- */
-.ellipsis {
-  white-space: nowrap; /* 1 */
-  text-overflow: ellipsis; /* 2 */
-  overflow: hidden;
-}
-```
-
 ## Project structure
 * Use The 7-1 Pattern - 7 folders, 1 file. Folders structure:
 
@@ -787,7 +750,7 @@ File named _shame.scss should be imported after any other file, at the very end 
 More info - http://csswizardry.com/2013/04/shame-css/
 
 ## SCSS-Lint
-* Use SCSS-Lint to linter your code. https://github.com/causes/scss-lint. Recommended setup:
+* Use SCSS-Lint to lint your code. https://github.com/causes/scss-lint. Recommended setup:
 
 ```xml
 scss_files: "**/*.scss"
